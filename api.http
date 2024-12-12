@@ -1,1 +1,10 @@
-GET http://localhost:3000/places?text=rua vitorino carmilo, 444
+GET http://localhost:3000/places?text=R. Caiubí, 1096 - Perdizes
+
+###
+GET http://localhost:3000/places?text=Avenida pacaembu 1004
+
+
+###
+@originId = ChIJT75C-vBXzpQRm2j_fXJPH6Q
+@destinationId = ChIJr8k8mhlYzpQR49dNSvdpDbE
+GET http://localhost:3000/directions?originId={{ originId }}&destinationId={{ destinationId }}
