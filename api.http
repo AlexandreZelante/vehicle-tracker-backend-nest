@@ -3,8 +3,20 @@ GET http://localhost:3000/places?text=R. Caiubí, 1096 - Perdizes
 ###
 GET http://localhost:3000/places?text=Avenida pacaembu 1004
 
-
 ###
 @originId = ChIJT75C-vBXzpQRm2j_fXJPH6Q
 @destinationId = ChIJr8k8mhlYzpQR49dNSvdpDbE
 GET http://localhost:3000/directions?originId={{ originId }}&destinationId={{ destinationId }}
+
+###
+POST http://localhost:3000/routes
+content-type: application/json
+
+{
+    "name": "sample",
+    "source_id": "{{originId}}",
+    "destination_id": "{{destinationId}}"
+}
+
+###
+GET http://localhost:3000/routes/675b86ba16ca48e0137dd4d0
